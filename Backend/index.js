@@ -9,6 +9,8 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.use(express.json());
+
 //Availlable Routes
 app.use('/api/authorization', require('./Routes/authorization'));
 app.use('/api/notes', require('./Routes/notes'));

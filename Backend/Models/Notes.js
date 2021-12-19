@@ -1,5 +1,5 @@
-//const mongoose = require('mongoose');
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
+//import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const NoteSchema = new Schema({
@@ -16,8 +16,8 @@ const NoteSchema = new Schema({
         default: "General"
     },
     date:{
-        type: date,
-        default: date.now
+        type: Date,
+        default: Date.now
     }
   });
 

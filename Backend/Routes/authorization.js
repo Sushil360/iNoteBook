@@ -1,12 +1,14 @@
+const { application } = require('express');
 const express = require('express')
 const router = express.Router();
+const User = require('../Models/User');
 
-router.get('/',  (req, res)=> {
-    obj={
-        a: 'sushil',
-        Number: 34
-    }
-    res.json(obj);
+//create a user using:  POST "/api/authorization"  
+router.post('/',  (req, res)=> {
+  console.log(req.body);
+  const user= User(req.body);
+  user.save()
+  res.send(req.body);
 })
 
 module.exports = router;
