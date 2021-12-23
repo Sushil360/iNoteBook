@@ -1,13 +1,14 @@
 const connectToMongoDb = require('./database');
 const express = require('express');
+var cors = require('cors')
+
 connectToMongoDb();
 
 const app = express()
-const port = 5000
+const port = 5000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.use(cors())
+
 
 app.use(express.json());
 
@@ -16,5 +17,5 @@ app.use('/api/authorization', require('./Routes/authorization'));
 app.use('/api/notes', require('./Routes/notes'));
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`iNotebook Backend listening at http://localhost:${port}`)
 })

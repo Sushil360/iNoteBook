@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import { Home } from './Components/Home';
 import NoteState from './Context/NoteState';
+import Alert from './Components/Alert';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <NoteState>
         <Router>
           <Navbar />
+          <Alert message="this is alter"/>
           <div className='container'>
             <Switch>
               <Route exact path="/">
