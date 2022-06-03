@@ -28,7 +28,7 @@ function AddNote(props) {
                             onChange={onchange}  minLength={5} required/>
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="description" className="form-label">Description</label>
+                        <label htmlFor="description" className="form-label">Description/Message</label>
                         <input type="text" className="form-control" id="description" value={note.description} name="description"  onChange={onchange} minLength={5} required/>
                     </div>
                     <div className="mb-3">
